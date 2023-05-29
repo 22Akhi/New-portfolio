@@ -13,21 +13,21 @@ const data = [
     id: 1,
     image: port1,
     title: "Food Order App (React)",
-    github: "https://github.com",
+    github: "https://github.com/22Akhi/foodorderApp",
     demo:"http://rhythmdanceacademy.in/"
   },
     {
     id: 2,
     image: port2,
     title: "Sign up & Login(React, Mongodb, Nodejs, Tailwindcss)",
-    github: "https://github.com",
+    github: "https://github.com/22Akhi/Signup-Login",
     demo:"http://rhythmdanceacademy.in/"
   },
       {
     id: 3,
     image: port3,
     title: "Expense Tracker (React)",
-    github: "https://github.com",
+    github: "https://github.com/22Akhi/ExpenseTracker",
     demo:"http://rhythmdanceacademy.in/"
   },
         {
@@ -41,7 +41,7 @@ const data = [
     id: 5,
     image: port5,
     title: "Portfolio Website (React)",
-    github: "https://github.com",
+    github: "https://github.com/22Akhi/portfolio-website",
     demo:"http://rhythmdanceacademy.in/"
   }
   //           {
@@ -72,7 +72,7 @@ const Portfolio = () => {
        </div>
                 <h3>{ title}</h3> 
              <div className = "portfolio__item-cta">
-                  <a href={ github} className="btn">Github</a>
+                  <a href={ github}  target = "_blank" className="btn">Github</a>
               <a href={demo} className="btn btn-primary" target = "_blank"> Live Demo</a>
            </div>
             
