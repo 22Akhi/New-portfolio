@@ -14,21 +14,21 @@ const data = [
     image: port1,
     title: "Food Order App (React)",
     github: "https://github.com/22Akhi/foodorderApp",
-    demo:"http://rhythmdanceacademy.in/"
+    demo:"https://foodorderapp.herokuapp.com/"
   },
     {
     id: 2,
     image: port2,
     title: "Sign up & Login(React, Mongodb, Nodejs, Tailwindcss)",
     github: "https://github.com/22Akhi/Signup-Login",
-    demo:"http://rhythmdanceacademy.in/"
+    demo:""
   },
       {
     id: 3,
     image: port3,
     title: "Expense Tracker (React)",
     github: "https://github.com/22Akhi/ExpenseTracker",
-    demo:"http://rhythmdanceacademy.in/"
+    demo:"https://myexpensetracker.herokuapp.com/"
   },
         {
     id: 4,

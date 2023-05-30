@@ -5,31 +5,35 @@ import { AiOutlineCheck } from 'react-icons/ai'
 const Services = () => {
   return (
     <section id="services">
-      <h5>What I offer</h5>
-      <h2>Services</h2>
+      <h5>What I know</h5>
+      <h2>Skill set</h2>
       <div className="container services__container">
         <article className ="service">
           <div className = "service__head">
-            <h3>UI/UX Design</h3>
+            <h3>Front end development</h3>
           </div>
           <ul className ="service__list">
             <li><AiOutlineCheck className="service__list-icon" />
-              <p> User-Centric Interface Design
+              <p> HTML5
 
 </p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Wireframing and Prototyping Expertise
+              <p>CSS3
 </p>
             </li>
             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Visual Design and Branding Skills</p>
+              <p>Javascript</p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Responsive and Mobile-Friendly Design</p>
+              <p>React</p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Interactive Elements and Animations
+              <p>Word press
+</p>
+            </li>
+                <li><AiOutlineCheck className="service__list-icon" />
+              <p>Tailwind
 </p>
             </li>
 
@@ -40,26 +44,17 @@ const Services = () => {
 
              <article className ="service">
           <div className = "service__head">
-            <h3>Web Development</h3>
+            <h3>Backend development</h3>
           </div>
           <ul className ="service__list">
             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Responsive and Mobile-Friendly Web Design</p>
+              <p>Nodejs</p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Back-End Development: Database and Server-Side</p>
+              <p>C++</p>
             </li>
             <li><AiOutlineCheck className="service__list-icon" />
-              <p>API Integration and Web Services
-</p>
-            </li>
-             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Debugging and Troubleshooting Skills
-
-</p>
-            </li>
-             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Version Control (Git) and Deployment
+              <p>MySQL
 </p>
             </li>
             
@@ -70,26 +65,30 @@ const Services = () => {
 
              <article className ="service">
           <div className = "service__head">
-            <h3>Content creation</h3>
+            <h3>Tools</h3>
           </div>
           <ul className ="service__list">
             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Content Strategy and Audience Targeting
+              <p>Visual Studio Code
 </p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>SEO Optimization and Keyword Research
+              <p>GIT
 </p>
             </li>
             <li><AiOutlineCheck className="service__list-icon" />
-              <p>Video Production and Editing Abilities
+              <p>Jira/Confluence
 </p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Creating images in Illustrator, Photoshop , Canva</p>
+              <p> Canva</p>
             </li>
              <li><AiOutlineCheck className="service__list-icon" />
-              <p>Social Media Content Creation</p>
+              <p>Adobe Photoshop & Illustrator</p>
+            </li>
+           
+               <li><AiOutlineCheck className="service__list-icon" />
+              <p>Figma</p>
             </li>
             
           </ul>
