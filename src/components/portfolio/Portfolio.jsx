@@ -21,7 +21,7 @@ const data = [
     image: port2,
     title: "Sign up & Login(React, Mongodb, Nodejs, Tailwindcss)",
     github: "https://github.com/22Akhi/Signup-Login",
-    demo:""
+    
   },
       {
     id: 3,
@@ -41,8 +41,8 @@ const data = [
     id: 5,
     image: port5,
     title: "Portfolio Website (React)",
-    github: "https://github.com/22Akhi/portfolio-website",
-    demo:"http://rhythmdanceacademy.in/"
+    github: "https://github.com/22Akhi/New-portfolio",
+    demo:"https://www.baishakhiportfolio.com/"
   }
   //           {
   //   id: 6,
