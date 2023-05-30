@@ -2,6 +2,7 @@ import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 
+//HeaderSocials
 const HeaderSocials = () => {
   return (
       <div className = 'header__socials'>
