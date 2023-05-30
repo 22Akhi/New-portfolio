@@ -1,10 +1,12 @@
 import React from 'react'
 import './contact.css'
 import { AiOutlineMail } from 'react-icons/ai';
-import { RiMessengerLine } from 'react-icons/ri';
+import { BsLinkedin } from 'react-icons/bs';
 import { BsWhatsapp } from 'react-icons/bs';
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { useState } from 'react';
+import AWS from 'aws-sdk';
 
 
 const Contact = () =>
@@ -12,10 +14,66 @@ const Contact = () =>
   
   const form = useRef();
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [ message, setMessage ] = useState( '' );
+  
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_r0uur98', 'template_7onq3i3', form.current, 'YOUR_PUBLIC_KEY')
+    //emailjs.sendForm('service_khzm4bc', 'template_7onq3i3', form.current, 'I0Bt3cTiy8Jg2NcJmwa1c')
+
+
+    AWS.config.update({
+      region: 'YOUR_AWS_REGION', // Replace with your AWS region
+      accessKeyId: 'YOUR_AWS_ACCESS_KEY_ID', // Replace with your AWS access key ID
+      secretAccessKey: 'YOUR_AWS_SECRET_ACCESS_KEY' // Replace with your AWS secret access key
+    });
+
+    const lambda = new AWS.Lambda();
+
+    const payload = {
+      name,
+      email,
+      message
+    };
+
+    const params = {
+      FunctionName: 'YOUR_LAMBDA_FUNCTION_NAME', // Replace with your Lambda function name
+      InvocationType: 'Event',
+      Payload: JSON.stringify(payload)
+    };
+
+    lambda.invoke(params, (err, data) => {
+      if (err) {
+        console.error(err);
+        // Handle error
+      } else {
+        console.log(data);
+        // Handle success
+      }
+    });
+
+    // Reset form fields
+    setName('');
+    setEmail('');
+  setMessage( '' );
+  
+  
  
 
     e.target.reset()
@@ -35,26 +93,26 @@ const Contact = () =>
           </article>
 
               <article className="contact__option">
-            <RiMessengerLine className = "contact__option-icon"/>
-            <h4>Messenger</h4>
-            <h5>Facebook</h5>
-            <a href= "https://www.facebook.com/baishakhi.ganguli" target = "_blank">Send a message</a>
+            <BsWhatsapp  className = "contact__option-icon"/>
+            <h4>+61 401347362</h4>
+            <h5>Call me or </h5>
+            <a>Send a message</a>
           </article>
 
               <article className="contact__option">
-            <BsWhatsapp className = "contact__option-icon"/>
-            <h4>WhatsApp</h4>
-            <h5>Message </h5>
-            <a href= "https://api.whatsapp.com/send?phone=+61401347362" target = "_blank">Send a message</a>
+            <BsLinkedin className = "contact__option-icon"/>
+            <h4>Message me in </h4>
+            <h5>Linkedin </h5>
+            <a href= "https://linkedin.com/in/bganguli22" target = "_blank">Send a message</a>
           </article>
 
-        </div>
-        <form ref = {form} onSubmit= {sendEmail}>
-          <input type="text" name="name" placeholder="Your Full Name" required />
-          <input type="email" name="email" placeholder="Your Email" />
-          <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+        </div>  
+        {/* <form ref = {form} onSubmit= {sendEmail}>
+          <input type="text" name="name" value={name} onChange={handleNameChange} placeholder="Your Full Name" required />
+          <input type="email" name="email" value={email} onChange={handleEmailChange} placeholder="Your Email" />
+          <textarea name="message" rows="7" value={message} onChange={handleMessageChange} placeholder="Your Message" required></textarea>
           <button type = "submit " className = "btn btn-primary"> Send Message</button>
-</form>
+</form> */}
       </div>
     </section>
   )
