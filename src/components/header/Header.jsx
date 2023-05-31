@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css';
 import '../../components/about/about.css';
-import CTA from './cta';
+import CTA from './CTA';
 // import ME from '../../assets/7.png';
 import HeaderSocial from './HeaderSocials'
 import { AiOutlineHtml5 } from 'react-icons/ai';
