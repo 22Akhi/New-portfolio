@@ -42,7 +42,7 @@ const data = [
     image: port5,
     title: "Portfolio Website (React)",
     github: "https://github.com/22Akhi/New-portfolio",
-    demo:"https://www.baishakhiportfolio.com/"
+    demo:"http://www.baishakhiportfolio.com"
   }
   //           {
   //   id: 6,
